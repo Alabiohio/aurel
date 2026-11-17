@@ -233,7 +233,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/[0.08] pt-6 text-xs text-[#A9A49A]/80">
-          <p>© 2026 AUREL Parfums. All rights reserved.</p>
+          <p>© 2026 Oheo Designs. All rights reserved.</p>
           <p>Paris · Grasse · Amber Glass Archive</p>
         </div>
       </FadeContent>
