@@ -26,6 +26,25 @@ export function Navbar({ cartCount, onOpenCart }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const desktopQuery = window.matchMedia('(min-width: 768px)');
+    const closeMenuOnDesktop = (event: MediaQueryListEvent) => {
+      if (event.matches) setMobileMenuOpen(false);
+    };
+
+    desktopQuery.addEventListener('change', closeMenuOnDesktop);
+    return () => desktopQuery.removeEventListener('change', closeMenuOnDesktop);
+  }, []);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMobileMenuOpen(false);
+    };
+    window.addEventListener('keydown', closeOnEscape);
+    return () => window.removeEventListener('keydown', closeOnEscape);
+  }, [mobileMenuOpen]);
+
   const handleLinkClick = () => {
     setMobileMenuOpen(false);
   };
@@ -87,6 +106,7 @@ export function Navbar({ cartCount, onOpenCart }: NavbarProps) {
               onClick={() => setMobileMenuOpen((prev) => !prev)}
               aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
               className="md:hidden inline-flex items-center justify-center min-h-[44px] min-w-[44px] text-[#F4F0E8] hover:text-[#B58A55] transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B58A55]"
             >
               {mobileMenuOpen ? (
@@ -109,7 +129,7 @@ export function Navbar({ cartCount, onOpenCart }: NavbarProps) {
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-x-0 top-16 z-30 bg-[#11110F] border-b border-white/[0.12] px-6 py-8 md:hidden"
           >
-            <nav aria-label="Mobile Navigation" className="flex flex-col gap-5">
+            <nav id="mobile-navigation" aria-label="Mobile Navigation" className="flex flex-col gap-5">
               {NAV_LINKS.map((link, index) => (
                 <a
                   key={link.href}

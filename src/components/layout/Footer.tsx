@@ -74,13 +74,13 @@ export function Footer() {
                   <Check className="h-5 w-5 stroke-[1.5]" />
                 </div>
                 <h3 className="mt-5 font-serif text-2xl text-[#F4F0E8]">
-                  Concierge Request Received
+                  Appointment Request Preview
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[#A9A49A]">
-                  Thank you{name ? `, ${name}` : ''}. Our archivist will respond
-                  to <span className="text-[#F4F0E8]">{email}</span> regarding{' '}
-                  <span className="text-[#B58A55]">{interest}</span> within one
-                  business day.
+                  {name ? `Thank you, ${name}. ` : ''}
+                  Your request for{' '}
+                  <span className="text-[#B58A55]">{interest}</span> is ready.
+                  This concept site does not send or store appointment requests.
                 </p>
                 <button
                   type="button"
@@ -161,13 +161,13 @@ export function Footer() {
 
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
                   <p className="text-xs text-[#A9A49A]">
-                    Complimentary sample vials accompany all private appointments.
+                    Preview only — no message will be sent or stored.
                   </p>
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#B58A55] bg-[#B58A55] px-7 py-3 text-xs font-medium tracking-[0.18em] uppercase text-[#11110F] hover:bg-[#c89b62] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                    className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#B58A55] bg-[#B58A55] px-7 py-3 text-xs font-medium tracking-[0.18em] uppercase text-[#11110F] transition-colors hover:bg-[#c89b62] active:bg-[#a87945] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4F0E8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#141310] whitespace-nowrap shrink-0 cursor-pointer"
                   >
-                    <span>Request Appointment</span>
+                    <span>Preview Appointment Request</span>
                     <ArrowUpRight className="h-3.5 w-3.5 stroke-[1.75]" />
                   </button>
                 </div>
@@ -196,30 +196,30 @@ export function Footer() {
             aria-label="Footer Navigation"
             className="md:col-span-4 flex flex-wrap items-center gap-6 md:justify-center text-xs tracking-[0.16em] uppercase text-[#A9A49A]"
           >
-            <a href="#collection" className="hover:text-[#F4F0E8] transition-colors">
+            <a href="#collection" className="rounded-sm hover:text-[#F4F0E8] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B58A55]">
               Collection
             </a>
-            <a href="#story" className="hover:text-[#F4F0E8] transition-colors">
+            <a href="#story" className="rounded-sm hover:text-[#F4F0E8] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B58A55]">
               Our Story
             </a>
-            <a href="#contact" className="hover:text-[#F4F0E8] transition-colors">
+            <a href="#contact" className="rounded-sm hover:text-[#F4F0E8] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B58A55]">
               Contact
             </a>
           </nav>
 
           <div className="md:col-span-4 flex flex-wrap items-center gap-6 md:justify-end text-xs tracking-[0.14em] uppercase text-[#A9A49A]">
             <a
-              href="#contact"
+              href="#collection"
               className="inline-flex items-center gap-1 hover:text-[#B58A55] transition-colors"
             >
-              <span>Instagram</span>
+              <span>Discover the Collection</span>
               <ArrowUpRight className="h-3 w-3 stroke-[1.5]" />
             </a>
             <a
               href="#story"
               className="inline-flex items-center gap-1 hover:text-[#B58A55] transition-colors"
             >
-              <span>Journal</span>
+              <span>Our Craft</span>
               <ArrowUpRight className="h-3 w-3 stroke-[1.5]" />
             </a>
             <a
@@ -233,7 +233,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/[0.08] pt-6 text-xs text-[#A9A49A]/80">
-          <p>© 2026 Oheo Designs. All rights reserved.</p>
+          <p>© 2026 AUREL Parfums. All rights reserved.</p>
           <p>Paris · Grasse · Amber Glass Archive</p>
         </div>
       </FadeContent>

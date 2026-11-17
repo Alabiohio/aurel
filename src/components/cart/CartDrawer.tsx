@@ -99,16 +99,16 @@ export function CartDrawer({
                     <Check className="h-5 w-5 stroke-[1.5]" />
                   </div>
                   <h3 className="mt-6 font-serif text-2xl text-[#F4F0E8]">
-                    Order #AUR-1042 Confirmed
+                    Demo Checkout Complete
                   </h3>
                   <p className="mt-3 max-w-xs text-sm leading-relaxed text-[#A9A49A]">
-                    Your hand-numbered flacons are being prepared in our Grasse
-                    atelier with two complimentary 2 ml discovery vials.
+                    This concept checkout does not process a payment or place an
+                    order. Your bag has been cleared for this demo.
                   </p>
                   <button
                     type="button"
                     onClick={handleClose}
-                    className="mt-8 border border-[#B58A55] px-6 py-3 text-xs font-medium tracking-[0.18em] uppercase text-[#B58A55] hover:bg-[#B58A55] hover:text-[#11110F] transition-colors cursor-pointer"
+                    className="mt-8 border border-[#B58A55] px-6 py-3 text-xs font-medium tracking-[0.18em] uppercase text-[#B58A55] transition-colors hover:bg-[#B58A55] hover:text-[#11110F] active:bg-[#a87945] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4F0E8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#151412] cursor-pointer"
                   >
                     Return to Gallery
                   </button>
@@ -125,7 +125,7 @@ export function CartDrawer({
                   <a
                     href="#collection"
                     onClick={handleClose}
-                    className="mt-7 border border-white/[0.16] px-6 py-3 text-xs font-medium tracking-[0.18em] uppercase text-[#F4F0E8] hover:border-[#B58A55] hover:text-[#B58A55] transition-colors"
+                    className="mt-7 border border-white/[0.16] px-6 py-3 text-xs font-medium tracking-[0.18em] uppercase text-[#F4F0E8] transition-colors hover:border-[#B58A55] hover:text-[#B58A55] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B58A55]"
                   >
                     Browse Collection
                   </a>
@@ -217,7 +217,7 @@ export function CartDrawer({
                   onClick={handleCheckout}
                   className="w-full bg-[#B58A55] py-3.5 text-xs font-medium tracking-[0.2em] uppercase text-[#11110F] hover:bg-[#c89b62] transition-colors cursor-pointer"
                 >
-                  Complete Order
+                  Complete Demo Checkout
                 </button>
               </div>
             )}

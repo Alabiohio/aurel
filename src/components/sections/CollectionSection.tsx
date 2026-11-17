@@ -55,7 +55,7 @@ export function CollectionSection({
           <FadeContent delay={0.12} className="max-w-md">
             <p className="text-sm md:text-[15px] leading-relaxed text-[#A9A49A]">
               Each flacon is filled in numbered batches in Grasse, resting twelve
-              weeks in darkness before release to preserve volatile top-note clarity.
+              ninety days in darkness before release to preserve volatile top-note clarity.
             </p>
           </FadeContent>
         </div>
@@ -75,6 +75,7 @@ export function CollectionSection({
                 <TiltedCard className="flex h-full flex-col">
                   <SpotlightCard
                     onClick={() => onSelectFragrance(fragrance)}
+                    ariaLabel={`View ${fragrance.name} fragrance details`}
                     className="group flex-1 flex flex-col rounded-3xl border border-white/[0.12] bg-[#161512] transition-transform duration-300 ease-out hover:-translate-y-0.5 cursor-pointer"
                   >
                   {/* Product Portrait (3:4) */}
@@ -160,7 +161,7 @@ export function CollectionSection({
                         <button
                           type="button"
                           onClick={(e) => handleQuickAdd(e, fragrance)}
-                          className={`w-full inline-flex items-center rounded-xl justify-center gap-2 min-h-[44px] px-5 py-2.5 text-xs font-medium tracking-[0.18em] uppercase border transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B58A55] ${
+                          className={`w-full inline-flex items-center rounded-xl justify-center gap-2 min-h-[44px] px-5 py-2.5 text-xs font-medium tracking-[0.18em] uppercase border transition-colors duration-200 active:scale-[0.99] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B58A55] ${
                             isAdded
                               ? 'bg-[#B58A55] border-[#B58A55] text-[#11110F]'
                               : 'border-white/[0.16] bg-transparent text-[#F4F0E8] hover:border-[#B58A55] hover:text-[#B58A55]'

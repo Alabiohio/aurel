@@ -21,7 +21,7 @@ const CRAFT_CHAPTERS = [
     index: '03.',
     title: 'Small-Batch Architecture',
     detail:
-      'Formulated at 28% extrait concentration with zero synthetic dyes, creating a tactile skin-close sillage that evolves across twelve hours.',
+      'Extraits are blended at 28% concentration; eaux de parfum at 20%. No synthetic dyes, with a skin-close sillage designed to evolve over twelve hours.',
   },
 ];
 
@@ -91,7 +91,7 @@ export function BrandStorySection() {
           </div>
 
           {/* Right Column: Asymmetrical Offset Atmospheric Atelier Imagery */}
-          <FadeContent className="lg:col-span-5 lg:mt-16">
+          <div className="lg:col-span-5 lg:mt-16">
             <figure className="border border-white/[0.12] bg-[#161512] p-3 rounded-xl md:p-4">
               <ImageReveal className="aspect-[4/3] w-full bg-[#1A1814]">
                 {!imgError ? (
@@ -126,7 +126,7 @@ export function BrandStorySection() {
                 Henri Moreau · Master Perfumer, AUREL
               </p>
             </FadeContent>
-          </FadeContent>
+          </div>
         </div>
       </div>
     </section>

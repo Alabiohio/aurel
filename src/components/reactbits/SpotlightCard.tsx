@@ -6,6 +6,7 @@ interface SpotlightCardProps {
   className?: string;
   spotlightColor?: string;
   onClick?: () => void;
+  ariaLabel?: string;
 }
 
 export function SpotlightCard({
@@ -13,6 +14,7 @@ export function SpotlightCard({
   className = '',
   spotlightColor = 'rgba(181, 138, 85, 0.16)',
   onClick,
+  ariaLabel,
 }: SpotlightCardProps) {
   const prefersReducedMotion = useReducedMotion();
   const cardRef = useRef<HTMLDivElement>(null);
@@ -32,9 +34,23 @@ export function SpotlightCard({
     <div
       ref={cardRef}
       onClick={onClick}
+      onKeyDown={(event) => {
+        if (
+          !onClick ||
+          event.target !== event.currentTarget ||
+          (event.key !== 'Enter' && event.key !== ' ')
+        ) {
+          return;
+        }
+        event.preventDefault();
+        onClick();
+      }}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setOpacity(1)}
       onMouseLeave={() => setOpacity(0)}
+      role={onClick ? 'button' : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      aria-label={onClick ? ariaLabel : undefined}
       className={`relative overflow-hidden ${className}`}
     >
       <div
