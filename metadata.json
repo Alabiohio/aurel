@@ -1,0 +1,6 @@
+{
+  "name": "AUREL — Haute Parfumerie",
+  "description": "Immersive 3D luxury fragrance house. Scent is a form of memory.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
